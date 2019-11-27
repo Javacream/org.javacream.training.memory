@@ -1,24 +1,11 @@
 package org.javacream.util.memory;
 
-import java.io.Serializable;
+public interface MegaByte {
 
-/**
- * One MegaByte instance consumes 1 MByte memory
- * 
- * @author Dr. Rainer Sawitzki
- * 
- */
-public class MegaByte implements Serializable{
-	private static final long serialVersionUID = 1L;
+	void set(int i, byte value) throws NoSuchFieldException, IllegalAccessException;
 
-	private byte[] megabyte;
+	int get(int i) throws NoSuchFieldException, IllegalAccessException;
 
-	public byte[] getMegabyte() {
-		return megabyte;
-	}
-
-	public MegaByte(int mByte) {
-		megabyte = new byte[mByte*1024*1024];
-	}
+	long size();
 
 }

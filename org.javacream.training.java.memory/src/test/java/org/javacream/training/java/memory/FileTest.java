@@ -5,15 +5,15 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-import org.javacream.util.memory.MegaByte;
+import org.javacream.util.memory.ByteArrayMegaByte;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class FileTest {
 
-	private static MegaByte data;
+	private static ByteArrayMegaByte data;
 	@BeforeClass public static void init() {
-		data = new MegaByte(500);
+		data = new ByteArrayMegaByte(500);
 	}
 	
 	@Test public void testTmpFile() throws IOException {
